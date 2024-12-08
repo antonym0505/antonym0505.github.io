@@ -74,8 +74,11 @@ main {
 }
 
 @media (min-width: 0) {
+  h1 {
+    font-size: 1rem !important;
+  }
   main {
-    min-width: 32rem;
+    min-width: 18rem;
     max-width: 40rem;
     & > article {
       grid-column: span 2;
