@@ -1,0 +1,85 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#tee-times {
+  display: flex;
+  flex-direction: column;
+
+  table.loading-true {
+    position: relative;
+    tbody {
+      opacity: 0.1;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      translate: -50% 100%;
+      border: 1rem solid var(--background-light);
+      border-top: 1rem solid var(--primary);
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      animation: spin 2s infinite ease-in-out;
+    }
+  }
+
+  th {
+    text-align: left;
+    position: relative;
+    div {
+      display: inline-flex;
+    }
+  }
+
+  tr:nth-child(even) {
+    background-color: var(--background-dark);
+    color: var(--high-contrast-text);
+  }
+
+  td,
+  th {
+    padding: 1rem;
+  }
+
+  .filter {
+    background-color: var(--background-dark);
+    border: var(--border-sm);
+    border-radius: 0.75rem;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transform-origin: top;
+    transition: transform 0.25s;
+    &[hidden] {
+      transform: scaleY(0);
+    }
+    &:not([hidden]) + [role='button'] {
+      color: var(--primary) !important;
+    }
+    label:has([type='checkbox']) {
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+    button.active-true {
+      border-color: var(--primary) !important;
+      color: var(--a87);
+    }
+  }
+
+  .material-symbols-outlined[role='button'] {
+    cursor: pointer;
+  }
+}
