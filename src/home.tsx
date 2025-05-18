@@ -1,9 +1,8 @@
 import { FC, MouseEvent, useCallback, useRef } from 'react'
 import { Link } from 'react-router'
-import ResumeDialog from './resume'
 
 const Home: FC = () => {
-  const dialogRef = useRef<HTMLDialogElement>(null)
+  // const dialogRef = useRef<HTMLDialogElement>(null)
   const timeout = useRef<number>()
   const copyEmailToClipboard = useCallback((e: MouseEvent) => {
     e.preventDefault()
@@ -105,17 +104,22 @@ const Home: FC = () => {
           </dd>
           <dt />
         </dl>
-        <button
-          style={{ margin: '2rem auto 0' }}
-          onClick={(e) => {
-            e.stopPropagation()
-            dialogRef.current?.showModal()
+        <Link
+          to={new URL(
+            'public/resume-2024-05-19.pdf',
+            window.location.origin
+          ).toString()}
+          target="_blank"
+          style={{
+            color: 'var(--primary)',
+            padding: '0.5rem 1rem',
+            width: 'fit-content',
           }}
         >
-          view full resume
-        </button>
+          view resume
+        </Link>
       </article>
-      <ResumeDialog ref={dialogRef} />
+      {/* <ResumeDialog ref={dialogRef} /> */}
       <article>
         <h2>skills</h2>
         <dl>

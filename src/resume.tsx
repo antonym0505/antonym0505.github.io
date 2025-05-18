@@ -4,7 +4,7 @@ import useOutsideClickHandler from './tee-times/filters/use-outside-click'
 const ResumeDialog = forwardRef<Pick<HTMLDialogElement, 'showModal'>>(
   (_, forwardedRef) => {
     const dialogRef = useRef<HTMLDialogElement>(null)
-    const objectRef = useRef<HTMLEmbedElement>(null)
+    const embedRef = useRef<HTMLEmbedElement>(null)
 
     useImperativeHandle(
       forwardedRef,
@@ -12,16 +12,16 @@ const ResumeDialog = forwardRef<Pick<HTMLDialogElement, 'showModal'>>(
       []
     )
 
-    useOutsideClickHandler(objectRef, () => dialogRef.current?.close())
+    useOutsideClickHandler(embedRef, () => dialogRef.current?.close())
 
     return (
       <dialog ref={dialogRef}>
         <embed
-          ref={objectRef}
-          src="src/resume-2024-05-19.pdf"
+          ref={embedRef}
+          src="public/resume-2024-05-19.pdf"
           type="application/pdf"
-          height={window.innerHeight}
-          width="100%"
+          height={window.innerHeight - 100}
+          width={window.innerWidth - 100}
         />
       </dialog>
     )
