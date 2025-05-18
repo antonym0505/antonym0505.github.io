@@ -129,18 +129,18 @@ const Home: FC = () => {
           <dt>frontend</dt>
           <dd>
             <ul>
-              <li>typescript</li>
-              <li>react</li>
-              <li>redux</li>
-              <li>d3</li>
-              <li>html/css</li>
+              <li>javascript&bull;typescript</li>
+              <li>react&bull;redux</li>
+              {/* <li>redux</li> */}
+              {/* <li>d3</li> */}
+              <li>d3&bull;html&bull;css</li>
             </ul>
           </dd>
           <dt>backend</dt>
           <dd>
             <ul>
               <li>java</li>
-              <li>spring</li>
+              <li>spring&bull;jpa</li>
               <li>sql</li>
             </ul>
           </dd>
@@ -148,7 +148,7 @@ const Home: FC = () => {
           <dd>
             <ul>
               <li>cypress</li>
-              <li>jest/rtl</li>
+              <li>jest&bull;rtl</li>
               <li>selenium</li>
             </ul>
           </dd>
