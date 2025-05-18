@@ -36,49 +36,48 @@ export const TeeTimeTable: FC = () => {
           </span>
         </div>
       ))}
-      <table
-        className={`loading-${loading}`}
-        style={{ flex: 1, width: '100%' }}
-      >
-        <thead>
-          <tr>
-            <th>
-              <div>
-                <span>Course</span>
-                <CourseFilter />
-              </div>
-            </th>
-            <th>
-              <div>
-                <span>Time</span>
-                <TimeFilter />
-              </div>
-            </th>
-            <th>
-              <div>
-                <span>Players</span>
-                <PlayerFilter />
-              </div>
-            </th>
-            <th>
-              <div>
-                <span>Cost</span>
-                {/* <span className="material-symbols-outlined">filter_alt</span> */}
-              </div>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {teeTimes.map((teeTime, index) => (
-            <tr key={index}>
-              <td>{courseNames[teeTime.courseId]}</td>
-              <td>{dayjs(teeTime.teetime).format('h:mm A')}</td>
-              <td>{teeTime.maxPlayers}</td>
-              <td>${teeTime.rates?.[0].greenFeeWalking / 100}</td>
+      <div style={{ flex: 1, width: '100%', overflowX: 'auto' }}>
+        <table className={`loading-${loading}`} style={{ width: '100%' }}>
+          <thead>
+            <tr>
+              <th>
+                <div>
+                  <span>Course</span>
+                  <CourseFilter />
+                </div>
+              </th>
+              <th>
+                <div>
+                  <span>Time</span>
+                  <TimeFilter />
+                </div>
+              </th>
+              <th>
+                <div>
+                  <span>Players</span>
+                  <PlayerFilter />
+                </div>
+              </th>
+              <th>
+                <div>
+                  <span>Cost</span>
+                  {/* <span className="material-symbols-outlined">filter_alt</span> */}
+                </div>
+              </th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {teeTimes.map((teeTime, index) => (
+              <tr key={index}>
+                <td>{courseNames[teeTime.courseId]}</td>
+                <td>{dayjs(teeTime.teetime).format('h:mm A')}</td>
+                <td>{teeTime.maxPlayers}</td>
+                <td>${teeTime.rates?.[0].greenFeeWalking / 100}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </main>
   )
 }

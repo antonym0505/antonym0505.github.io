@@ -10,6 +10,7 @@
 #tee-times {
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 
   table.loading-true {
     position: relative;

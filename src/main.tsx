@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter, Route, Routes } from 'react-router'
+import { HashRouter, Route, Routes } from 'react-router'
 
 import App from './App.tsx'
 import Home from './home.tsx'
@@ -8,7 +8,7 @@ import { TeeTimeProvider } from './tee-times/tee-time-context.tsx'
 import { TeeTimeTable } from './tee-times/tee-times.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<Home />} />
@@ -17,5 +17,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         </Route>
       </Route>
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 )
