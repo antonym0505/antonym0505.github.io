@@ -167,12 +167,12 @@ label > svg {
   translate: -0.375rem -50%;
 }
 
-label > span.alert {
-  font-size: 0.75rem;
+span.alert {
+  color: var(--primary);
   position: absolute;
-  bottom: 0;
+  top: 0;
   right: 0;
-  translate: 0 100%;
+  translate: -100%;
 }
 
 label > span.character-count {
