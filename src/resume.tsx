@@ -18,7 +18,7 @@ const ResumeDialog = forwardRef<Pick<HTMLDialogElement, 'showModal'>>(
       <dialog ref={dialogRef}>
         <embed
           ref={embedRef}
-          src="src/resume-2024-05-19.pdf"
+          src="/resume.pdf"
           type="application/pdf"
           height={window.innerHeight - 100}
           width={window.innerWidth - 100}

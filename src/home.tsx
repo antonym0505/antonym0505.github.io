@@ -112,10 +112,7 @@ const Home: FC = () => {
             dialogRef.current?.showModal()
           }}
           target="_blank"
-          to={new URL(
-            'src/resume-2024-05-19.pdf',
-            window.location.origin
-          ).toString()}
+          to={new URL('resume.pdf', window.location.origin).toString()}
           style={{
             color: 'var(--primary)',
             padding: '0.5rem 1rem',
