@@ -113,7 +113,7 @@ const Home: FC = () => {
           }}
           target="_blank"
           to={new URL(
-            'public/resume-2024-05-19.pdf',
+            'src/resume-2024-05-19.pdf',
             window.location.origin
           ).toString()}
           style={{
