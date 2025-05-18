@@ -10,9 +10,6 @@ permissions:
   pages: write
   id-token: write
 
-env:
-  API_KEY: ${{ secrets.API_KEY }}
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
