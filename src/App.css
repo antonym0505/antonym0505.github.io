@@ -172,7 +172,7 @@ span.alert {
   position: absolute;
   top: 0;
   right: 0;
-  translate: -100%;
+  translate: 0 -100%;
 }
 
 label > span.character-count {
