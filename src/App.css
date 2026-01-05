@@ -60,13 +60,14 @@ nav > .app-bar {
   justify-content: space-between;
 }
 
-nav > a {
+nav > p {
   margin-top: 4rem;
   padding: 0.375rem 1.5rem;
 }
 
-nav > a[href=''] {
-  pointer-events: none;
+nav > a {
+  margin-top: 1rem;
+  padding: 0.375rem 1.5rem;
 }
 
 main {
